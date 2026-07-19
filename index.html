@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Station</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <div class="eyebrow">JS Mini Project — Weather App</div>
+      <h1>Weather Station</h1>
+    </div>
+    <div class="masthead-right">Source: open-meteo.com<br>No API key required</div>
+  </header>
+
+  <div class="search-row">
+    <div class="search-field">
+      <input type="text" id="searchInput" placeholder="Search a city — try 'Vijayawada' or 'Tokyo'" autocomplete="off">
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+  </div>
+  <p class="hint">Type a city name and pick a result from the list.</p>
+
+  <div id="status"></div>
+
+  <div class="unit-toggle">
+    <button id="unitC" class="active">°C</button>
+    <button id="unitF">°F</button>
+  </div>
+
+  <div class="dashboard" id="dashboard">
+
+    <div class="current-card">
+      <div class="current-icon" id="currentIcon"></div>
+      <div class="current-main">
+        <p class="place-name" id="placeName">—</p>
+        <p class="place-sub" id="placeSub">—</p>
+        <div class="temp-now" id="tempNow">—</div>
+        <p class="condition-label" id="conditionLabel">—</p>
+      </div>
+      <div class="current-stats">
+        <div><span class="k">Feels like</span><span class="v" id="feelsLike">—</span></div>
+        <div><span class="k">Humidity</span><span class="v" id="humidity">—</span></div>
+        <div><span class="k">Wind</span><span class="v" id="wind">—</span></div>
+        <div><span class="k">Sunrise / Sunset</span><span class="v" id="sunTimes">—</span></div>
+      </div>
+    </div>
+
+    <div class="section-title">Next 24 hours</div>
+    <div class="hourly-card">
+      <svg class="hourly-svg" id="hourlySvg" viewBox="0 0 760 140"></svg>
+    </div>
+
+    <div class="section-title">7-day forecast</div>
+    <div class="forecast-row" id="forecastRow"></div>
+
+  </div>
+
+  <div class="section-title" id="recentTitle" style="display:none;">Recently viewed</div>
+  <div class="recent-list" id="recentList"></div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
